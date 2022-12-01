@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'App_Blog',
     'App_Login',
     'crispy_forms',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -123,12 +124,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIR = [STATIC_DIR]
+STATIC_URL = '/static/'
+STATICFILES_DIR = [STATIC_DIR,]
 
 #MEDIA
 MEDIA_ROOT = MEDIA_DIR
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 
 #LOGIN URL
 LOGIN_URL = '/account/login/'
